@@ -8,7 +8,7 @@ const {defaultResponse, logger} = require('./middleware/custom');
 
 // Import specific Routers
 const projectRouter = require("./projects/projectRouter"); 
-// const ingredientRouter = require("./ingredients/ingredientRouter"); 
+const resourceRouter = require("./resources/resourceRouter"); 
 
 // Create server
 const server = express();
@@ -25,7 +25,7 @@ server.get('/', (req, res) => {
 
 // Use specific Routers
 server.use("/projs", projectRouter); 
-// server.use("/ingredients", ingredientRouter); 
+server.use("/res", resourceRouter); 
 
 server.use(defaultResponse);
 
