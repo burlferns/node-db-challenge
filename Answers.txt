@@ -1,0 +1,14 @@
+Q1: Explain the difference between Relational Databases and SQL.
+A1: A relational database is piece of software for storing data in a persistent manner for later retrieval. Data in a relational database is stored in tables. SQL stands for Structured Query Language and is a database management language for relational databases. With SQL you put data into a relational database and read data from it.
+
+
+Q2: Why do tables need a primary key
+A2: A primary key is a column in a relational database table that holds unique data, which means that no data in the column can be the same as another data in the column; they all have to be different. Because of this uniqueness, we can identify a record (which is a row in a relational database table) by the value of its data in the primary key column. Thus, we need a primary key in a relational database table to identify each record (row) in the table in a unique manner.
+
+
+Q3: What is the name given to a table column that references the primary key on another table.
+A3. Such a column is called a foreign key.
+
+
+Q4: What do we need in order to have a many to many relationship between two tables.
+A4: Let’s say the two tables are called “TableX” & “TableY”.  We need an intermediary table (let’s call it “IntA”) to create a many-to-many relationship between “TableX” & “TableY”. This table “IntA” should contain two foreign keys, one of which references the primary key from “TableX” and the other which references the primary key from “TableY”. The data in each column of each foreign key in “IntA” need not be unique, however we must configure the relational database to make sure that the combination of the two foreign keys for each record (row) in “IntA” is unique. This is how you set up a many-to-many relationship between two tables. 
