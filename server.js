@@ -9,6 +9,7 @@ const {defaultResponse, logger} = require('./middleware/custom');
 // Import specific Routers
 const projectRouter = require("./projects/projectRouter"); 
 const resourceRouter = require("./resources/resourceRouter"); 
+const taskRouter = require("./tasks/taskRouter"); 
 
 // Create server
 const server = express();
@@ -26,6 +27,7 @@ server.get('/', (req, res) => {
 // Use specific Routers
 server.use("/projs", projectRouter); 
 server.use("/res", resourceRouter); 
+server.use("/tsks", taskRouter); 
 
 server.use(defaultResponse);
 
